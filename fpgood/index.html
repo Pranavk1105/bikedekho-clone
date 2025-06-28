@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeDekho - New Bikes, Used Bikes, Electric Bikes Price, Bike Reviews & News</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Find new bikes, used bikes, electric bikes with price, reviews, comparisons, and latest news. India's largest bike portal.">
+    <meta name="keywords" content="bikes, motorcycles, scooters, new bikes, used bikes, electric bikes, bike prices, bike reviews">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src =  "bk.svg" alt="BikeDekho Logo" class="logo-image">
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search Bikes or Scooters" class="search-input">
+                        <div class="search-suggestions">
+                            <div class="suggestion-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>Yamaha YZF R15 V3</span>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>Honda Activa 6G</span>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>TVS Apache RTR 160</span>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>Bajaj Pulsar 150</span>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>Hero Splendor Plus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <span>English</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="language-dropdown">
+                            <div class="language-option">English</div>
+                            <div class="language-option">हिंदी</div>
+                        </div>
+                    </div>
+                    <div class="wishlist-icon">
+                        <i class="far fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </div>
+                    <div class="auth-section" onclick="window.location.href='login.html'">
+                        <i class="far fa-user"></i>
+                        <span>Login / Register</span>
+                        <div class="auth-dropdown">
+                            <a href="login.html" class="auth-option">Login</a>
+                            <a href="login.html" class="auth-option">Register</a>
+                            <div class="auth-option">My Account</div>
+                            <div class="auth-option">My Orders</div>
+                            <div class="auth-option">Settings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">BIKES <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-dropdown">
+                            <div class="dropdown-section">
+                                <h4>By Category</h4>
+                                <a href="new-bikes.html">Commuter Bikes</a>
+                                <a href="new-bikes.html">Sports Bikes</a>
+                                <a href="new-bikes.html">Cruiser Bikes</a>
+                                <a href="new-bikes.html">Naked Bikes</a>
+                            </div>
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">SCOOTERS <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-dropdown">
+                            <div class="dropdown-section">
+                                <h4>By Category</h4>
+                                <a href="new-bikes.html">Automatic Scooters</a>
+                                <a href="new-bikes.html">Maxi Scooters</a>
+                                <a href="new-bikes.html">Sport Scooters</a>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">BIKE FINANCE <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-dropdown">
+                            <div class="dropdown-section">
+                                <h4>Finance Options</h4>
+                                <a href="#" onclick="openEMIModal()">Bike Loan</a>
+                                <a href="#" onclick="openEMIModal()">EMI Calculator</a>
+                                <a href="#">Insurance</a>
+                                <a href="#">Extended Warranty</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h4>Banking Partners</h4>
+                                <a href="#">HDFC Bank</a>
+                                <a href="#">ICICI Bank</a>
+                                <a href="#">SBI</a>
+                                <a href="#">Bajaj Finserv</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">USED BIKES <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-dropdown">
+                            <div class="dropdown-section">
+                                <h4>Buy Used</h4>
+                                <a href="#">Buy Used Bikes</a>
+                                <a href="#">Sell Your Bike</a>
+                                <a href="#">Warranty Options</a>
+                            </div>
+                           
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">COMPARE BIKES <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-dropdown">
+                            <div class="dropdown-section">
+                                <h4>Latest</h4>
+                                <a href="compare.html">COMPARE</a>
+                                
+                            </div>
+                            
+                        </div>
+                    </li>
+                </ul>
+                <div class="city-selector">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mumbai</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="city-dropdown">
+                        <div class="city-search">
+                            <input type="text" placeholder="Search city..." class="city-search-input">
+                        </div>
+                        <div class="popular-cities">
+                            <h5>Popular Cities</h5>
+                            <div class="city-option" data-city="mumbai">Mumbai</div>
+                            <div class="city-option" data-city="delhi">Delhi</div>
+                            <div class="city-option" data-city="bangalore">Bangalore</div>
+                            <div class="city-option" data-city="chennai">Chennai</div>
+                            <div class="city-option" data-city="pune">Pune</div>
+                            <div class="city-option" data-city="hyderabad">Hyderabad</div>
+                            <div class="city-option" data-city="kolkata">Kolkata</div>
+                            <div class="city-option" data-city="ahmedabad">Ahmedabad</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-title">Menu</span>
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-item">
+                    <a href="new-bikes.html" class="mobile-menu-link">BIKES</a>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="new-bikes.html" class="mobile-menu-link">SCOOTERS</a>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="bike-quiz.html" class="mobile-menu-link">BIKE FINDER QUIZ</a>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link" onclick="openEMIModal()">BIKE FINANCE</a>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">USED BIKES</a>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">NEWS & VIDEOS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800" alt="Hero Background" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="search-panel">
+                <h1 class="search-title">Search the right bike</h1>
+                
+                <div class="bike-type-tabs">
+                    <button class="tab-btn active" data-tab="new">New Bike</button>
+                    <button class="tab-btn" data-tab="used">Used Bike</button>
+                </div>
+                
+                <div class="search-options">
+                    <label class="radio-option">
+                        <input type="radio" name="search-type" value="brand" checked>
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">By Brand</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="search-type" value="budget">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">By Budget</span>
+                    </label>
+                </div>
+                
+                <div class="search-form" id="brand-search-form">
+                    <div class="form-dropdown">
+                        <select name="brand" id="brand-select" class="dropdown-select">
+                            <option value="">Select Brand</option>
+                            <option value="honda">Honda</option>
+                            <option value="yamaha">Yamaha</option>
+                            <option value="bajaj">Bajaj</option>
+                            <option value="tvs">TVS</option>
+                            <option value="hero">Hero</option>
+                            <option value="royal-enfield">Royal Enfield</option>
+                            <option value="ktm">KTM</option>
+                            <option value="kawasaki">Kawasaki</option>
+                            <option value="suzuki">Suzuki</option>
+                        </select>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </div>
+                    
+                    <div class="form-dropdown">
+                        <select name="model" id="model-select" class="dropdown-select">
+                            <option value="">Select Model</option>
+                        </select>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </div>
+                    
+                    <button class="search-btn" onclick="performSearch()">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+                
+                <a href="new-bikes.html" class="advanced-search">
+                    Advanced Search <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+            
+            <div class="hero-bike">
+                <div class="bike-info">
+                    
+                    <div class="year">2025</div>
+                    <h2 class="bike-name">Yezdi Adventure</h2>
+                    <p class="bike-tagline">New Design, Better Features</p>
+                    <div class="bike-details">
+                        <h3 class="detail-title">Adventure</h3>
+                        <p class="detail-subtitle">New Design,<br>Better Features</p>
+                        <button class="know-more-btn" onclick="showBikeDetails('yezdi-adventure')">
+                            Know More <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <div class="container">
+            <div class="quick-actions-grid">
+                <div class="quick-action-card" onclick="window.location.href='new-bikes.html'">
+                    <div class="quick-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>New Bikes</h3>
+                    <p>Find the latest bikes with best prices</p>
+                </div>
+                <div class="quick-action-card" onclick="alert('Used bikes section coming soon!')">
+                    <div class="quick-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Used Bikes</h3>
+                    <p>Buy certified pre-owned bikes</p>
+                </div>
+               
+                <div class="quick-action-card">
+                    <a href = "compare.html">
+                    <div class="quick-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    </a>
+                    <h3>Compare</h3>
+                    <p>Compare bikes side by side</p>
+                </div>
+                
+
+                <div class="quick-action-card" onclick="openEMIModal()">
+                    <div class="quick-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>EMI Calculator</h3>
+                    <p>Calculate your bike loan EMI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Features Section -->
+    <section class="custom-features">
+        <div class="container">
+            <h2 class="section-title">Discover Your Perfect Bike</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card" onclick="startBikeQuiz()">
+                    <div class="feature-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Bike Finder Quiz</h3>
+                    <p>Answer a few questions and get personalized bike recommendations based on your needs, budget, and preferences.</p>
+                    <button class="feature-btn">Take Quiz Now</button>
+                </div>
+                
+                <div class="feature-card" onclick="calculateOwnershipCost()">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Ownership Cost Calculator</h3>
+                    <p>Calculate the total cost of owning your dream bike including fuel, insurance, maintenance, and depreciation.</p>
+                    <button class="feature-btn">Calculate Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bikes in Spotlight -->
+    <section class="bikes-spotlight">
+        <div class="container">
+            <h2 class="section-title">Bikes in Spotlight</h2>
+            
+            <div class="spotlight-tabs">
+                <button class="spotlight-tab active" data-category="commuter">Commuter Bikes</button>
+                <button class="spotlight-tab" data-category="sports">Sports Bikes</button>
+                <button class="spotlight-tab" data-category="scooters">Scooters</button>
+                <button class="spotlight-tab" data-category="electric">Electric Bikes</button>
+            </div>
+            
+            <div class="bikes-grid" id="spotlight-bikes-grid">
+                <!-- Bikes will be populated by JavaScript -->
+            </div>
+            
+            <div class="view-all">
+                <a href="new-bikes.html" class="view-all-link">View All Bikes <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scooters Section -->
+    <section class="scooters-spotlight">
+        <div class="container">
+            <h2 class="section-title">Scooters in Spotlight</h2>
+            
+            <div class="bikes-grid" id="scooters-grid">
+                <!-- Scooters will be populated by JavaScript -->
+            </div>
+            
+            <div class="view-all">
+                <a href="new-bikes.html" class="view-all-link">View All Popular Scooters <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Bikes -->
+    <section class="upcoming-bikes">
+        <div class="container">
+            <h2 class="section-title">Upcoming Bikes and Scooters</h2>
+            
+            <div class="bikes-grid">
+                <div class="bike-card upcoming" data-bike-id="suzuki-access">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/suzuki/2025-access-125/source/2025-access-125681da55c13895.jpg?imwidth=400&impolicy=resize" alt="Suzuki Access Electric" loading="lazy">
+                        <div class="bike-badge upcoming">Upcoming</div>
+                        <button class="notify-btn">
+                            <i class="fas fa-bell"></i>
+                           
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">Suzuki Access Electric</h3>
+                        <p class="bike-price">₹1.20 - 1.50 Lakh*</p>
+                        <p class="launch-date">Expected Launch: Mar 2025</p>
+                        <div class="bike-actions">
+                            <button class="offer-btn">Get Launch Updates</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card upcoming" data-bike-id="tvs-adv">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/tvs/adv/source/adv678caacb6e5cb.jpg" alt="TVS RTX 300" loading="lazy">
+                        <div class="bike-badge upcoming">Upcoming</div>
+                        <button class="notify-btn">
+                            <i class="fas fa-bell"></i>
+                            
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">TVS RTX 300</h3>
+                        <p class="bike-price">₹2.50 - 3.00 Lakh*</p>
+                        <p class="launch-date">Expected Launch: Apr 2025</p>
+                        <div class="bike-actions">
+                            <button class="offer-btn">Get Launch Updates</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card upcoming" data-bike-id="ktm-390-smc">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/ktm/390-smc-r/source/390-smc-r6788fb179321e.jpg?imwidth=400&impolicy=resize" alt="KTM 390 SMC R" loading="lazy">
+                        <div class="bike-badge upcoming">Upcoming</div>
+                        <button class="notify-btn">
+                            <i class="fas fa-bell"></i>
+                            
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">KTM 390 SMC R</h3>
+                        <p class="bike-price">₹3.50 - 4.00 Lakh*</p>
+                        <p class="launch-date">Expected Launch: Jun 2025</p>
+                        <div class="bike-actions">
+                            <button class="offer-btn">Get Launch Updates</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card upcoming" data-bike-id="hero-vida-v2">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/vida/vida-v2/source/vida-v26751ab00e39b9.jpg?imwidth=400&impolicy=resize" alt="Hero Vida V2" loading="lazy">
+                        <div class="bike-badge upcoming">Upcoming</div>
+                        <button class="notify-btn">
+                            <i class="fas fa-bell"></i>
+                           
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">Hero Vida V2</h3>
+                        <p class="bike-price">₹1.40 - 1.80 Lakh*</p>
+                        <p class="launch-date">Expected Launch: May 2025</p>
+                        <div class="bike-actions">
+                            <button class="offer-btn">Get Launch Updates</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="#" class="view-all-link">View All Upcoming Bikes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Bikes -->
+    <section class="latest-bikes">
+        <div class="container">
+            <h2 class="section-title">Latest Bikes and Scooters</h2>
+            
+            <div class="bikes-grid">
+                <div class="bike-card" data-bike-id="kawasaki-z900">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/kawasaki/2020-z900/source/2020-z900683e7512e4390.jpg?imwidth=400&impolicy=resize" alt="Kawasaki Z900" loading="lazy">
+                        <div class="bike-badge latest">Latest</div>
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">Kawasaki Z900</h3>
+                        <p class="bike-price">₹8.50 - 9.50 Lakh*</p>
+                        <div class="bike-specs">
+                            <span class="spec">948 cc</span>
+                            <span class="spec">17 kmpl</span>
+                            <span class="spec">125 PS</span>
+                        </div>
+                        <div class="bike-actions">
+                            <button class="offer-btn">View June Offers</button>
+                            <button class="compare-btn">
+                                <i class="fas fa-plus"></i>
+                                Compare
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card" data-bike-id="honda-gold-wing">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/honda/honda-gold-wing/source/honda-gold-wing67f73fff0c7fd.jpg?imwidth=400&impolicy=resize" alt="Honda Gold Wing" loading="lazy">
+                        <div class="bike-badge premium">Premium</div>
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">Honda Gold Wing</h3>
+                        <p class="bike-price">₹39.16 - 41.71 Lakh*</p>
+                        <div class="bike-specs">
+                            <span class="spec">1833 cc</span>
+                            <span class="spec">12 kmpl</span>
+                            <span class="spec">126 PS</span>
+                        </div>
+                        <div class="bike-actions">
+                            <button class="offer-btn">View June Offers</button>
+                            <button class="compare-btn">
+                                <i class="fas fa-plus"></i>
+                                Compare
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card" data-bike-id="honda-cb1000-hornet">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/honda/cb-1000-hornet/source/cb-1000-hornet6830737d6c56e.jpg?imwidth=400&impolicy=resize" alt="Honda CB1000 Hornet SP" loading="lazy">
+                        <div class="bike-badge latest">Latest</div>
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">Honda CB1000 Hornet SP</h3>
+                        <p class="bike-price">₹12.50 - 13.50 Lakh*</p>
+                        <div class="bike-specs">
+                            <span class="spec">998 cc</span>
+                            <span class="spec">15 kmpl</span>
+                            <span class="spec">152 PS</span>
+                        </div>
+                        <div class="bike-actions">
+                            <button class="offer-btn">View June Offers</button>
+                            <button class="compare-btn">
+                                <i class="fas fa-plus"></i>
+                                Compare
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card" data-bike-id="royal-enfield-guerrilla">
+                    <div class="bike-image">
+                        <img src="https://cdn.bikedekho.com/processedimages/royal-enfield/scram-450/source/scram-45066978a3a3bc18.jpg?imwidth=400&impolicy=resize" alt="Royal Enfield Guerrilla 450" loading="lazy">
+                        <div class="bike-badge latest">Latest</div>
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="bike-card-info">
+                        <h3 class="bike-card-name">Royal Enfield Guerrilla 450</h3>
+                        <p class="bike-price">₹2.39 - 2.54 Lakh*</p>
+                        <div class="bike-specs">
+                            <span class="spec">452 cc</span>
+                            <span class="spec">40 kmpl</span>
+                            <span class="spec">40 PS</span>
+                        </div>
+                        <div class="bike-actions">
+                            <button class="offer-btn">View June Offers</button>
+                            <button class="compare-btn">
+                                <i class="fas fa-plus"></i>
+                                Compare
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="#" class="view-all-link">View All Latest Bikes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Brands -->
+    <section class="popular-brands">
+        <div class="container">
+            <h2 class="section-title">Popular Brands</h2>
+            
+            <div class="brands-grid">
+                <div class="brand-card" data-brand="honda">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/honda.jpg" alt="Honda" loading="lazy">
+                    </div>
+                    <span class="brand-name">Honda</span>
+                    <span class="bike-count">25 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="royal-enfield">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/royal-enfield.jpg" alt="Royal Enfield" loading="lazy">
+                    </div>
+                    <span class="brand-name">Royal Enfield</span>
+                    <span class="bike-count">12 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="tvs">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/tvs.jpg" alt="TVS" loading="lazy">
+                    </div>
+                    <span class="brand-name">TVS</span>
+                    <span class="bike-count">18 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="yamaha">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/yamaha.jpg" alt="Yamaha" loading="lazy">
+                    </div>
+                    <span class="brand-name">Yamaha</span>
+                    <span class="bike-count">22 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="hero">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/hero.jpg" alt="Hero" loading="lazy">
+                    </div>
+                    <span class="brand-name">Hero</span>
+                    <span class="bike-count">20 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="bajaj">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/bajaj.jpg" alt="Bajaj" loading="lazy">
+                    </div>
+                    <span class="brand-name">Bajaj</span>
+                    <span class="bike-count">15 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="ktm">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/ktm.jpg" alt="KTM" loading="lazy">
+                    </div>
+                    <span class="brand-name">KTM</span>
+                    <span class="bike-count">8 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="kawasaki">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/kawasaki.jpg" alt="Kawasaki" loading="lazy">
+                    </div>
+                    <span class="brand-name">Kawasaki</span>
+                    <span class="bike-count">6 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="bmw">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/bmw.jpg" alt="BMW" loading="lazy">
+                    </div>
+                    <span class="brand-name">BMW</span>
+                    <span class="bike-count">10 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="suzuki">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/suzuki.jpg" alt="Suzuki" loading="lazy">
+                    </div>
+                    <span class="brand-name">Suzuki</span>
+                    <span class="bike-count">14 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="jawa">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/jawa-motorcycles.jpg" alt="Jawa" loading="lazy">
+                    </div>
+                    <span class="brand-name">Jawa</span>
+                    <span class="bike-count">4 Models</span>
+                </div>
+                
+                <div class="brand-card" data-brand="triumph">
+                    <div class="brand-logo">
+                        <img src="https://cdn.bikedekho.com/pwa/img/brandLogo_168x84/triumph.jpg" alt="Triumph" loading="lazy">
+                    </div>
+                    <span class="brand-name">Triumph</span>
+                    <span class="bike-count">7 Models</span>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="#" class="view-all-link">All Bike Brands</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Used Bikes Section -->
+    <section class="used-bikes">
+        <div class="container">
+            <h2 class="section-title">Get Trusted Used Bikes Nearby</h2>
+            
+            <div class="used-bikes-content">
+                <div class="cities-section">
+                    <div class="cities-grid">
+                        <div class="city-card" data-city="ahmedabad">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">87 Used Bikes in</span>
+                                <span class="city-name">Ahmedabad</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="bangalore">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">392 Used Bikes in</span>
+                                <span class="city-name">Bangalore</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="chandigarh">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">25 Used Bikes in</span>
+                                <span class="city-name">Chandigarh</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="chennai">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">183 Used Bikes in</span>
+                                <span class="city-name">Chennai</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="delhi">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">609 Used Bikes in</span>
+                                <span class="city-name">Delhi</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="ghaziabad">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">82 Used Bikes in</span>
+                                <span class="city-name">Ghaziabad</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="gurgaon">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">113 Used Bikes in</span>
+                                <span class="city-name">Gurgaon</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="hyderabad">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">259 Used Bikes in</span>
+                                <span class="city-name">Hyderabad</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="jaipur">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">126 Used Bikes in</span>
+                                <span class="city-name">Jaipur</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="kolkata">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">146 Used Bikes in</span>
+                                <span class="city-name">Kolkata</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="lucknow">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">84 Used Bikes in</span>
+                                <span class="city-name">Lucknow</span>
+                            </div>
+                        </div>
+                        
+                        <div class="city-card" data-city="mumbai">
+                            <div class="city-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="city-info">
+                                <span class="city-count">239 Used Bikes in</span>
+                                <span class="city-name">Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-form-section">
+                    <div class="form-header">
+                        <p>I am looking to buy a second hand bike in</p>
+                    </div>
+                    <div class="city-search">
+                        <div class="form-dropdown">
+                            <i class="fas fa-map-marker-alt location-icon"></i>
+                            <select name="city" class="dropdown-select city-select">
+                                <option value="">Enter your city</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="delhi">Delhi</option>
+                                <option value="bangalore">Bangalore</option>
+                                <option value="hyderabad">Hyderabad</option>
+                                <option value="chennai">Chennai</option>
+                                <option value="pune">Pune</option>
+                                <option value="kolkata">Kolkata</option>
+                                <option value="ahmedabad">Ahmedabad</option>
+                                <option value="jaipur">Jaipur</option>
+                                <option value="lucknow">Lucknow</option>
+                                <option value="chandigarh">Chandigarh</option>
+                                <option value="gurgaon">Gurgaon</option>
+                                <option value="ghaziabad">Ghaziabad</option>
+                            </select>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </div>
+                        <button class="search-used-btn">
+                            <i class="fas fa-search"></i>
+                            Search Used Bikes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">India's #1</h3>
+                        <p class="stat-subtitle">Largest Auto portal</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Bike Sold</h3>
+                        <p class="stat-subtitle">Every 4 minute</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Offers</h3>
+                        <p class="stat-subtitle">Stay updated pay less</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Compare</h3>
+                        <p class="stat-subtitle">Decode the right bike</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 class="footer-title">ABOUT BIKEDEKHO</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers With Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Press Release</a></li>
+                        <li><a href="#">Awards & Recognition</a></li>
+                        <li><a href="#">Corporate Governance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">CONNECT WITH US</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advertise with Us</a></li>
+                        <li><a href="#">Become a Partner</a></li>
+                        <li><a href="#">Dealer Portal</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">OTHERS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">TrucksDekho</a></li>
+                        <li><a href="#">TractorsDekho</a></li>
+                        <li><a href="#">TyreDekho</a></li>
+                        <li><a href="#">BatteryDekho</a></li>
+                        <li><a href="#">Girnar Vision Fund</a></li>
+                        <li><a href="#">ZigWheels</a></li>
+                        <li><a href="#">OTO Capital</a></li>
+                        <li><a href="#">Gaadi Store</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">EXPERIENCE BIKEDEKHO APP</h4>
+                    <div class="app-links">
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Download on App Store" loading="lazy">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Get it on Google Play" loading="lazy">
+                        </a>
+                    </div>
+                    
+                    <div class="group-ventures">
+                        <h5 class="ventures-title">CARDEKHO GROUP VENTURES</h5>
+                        <div class="venture-logos">
+                            <span class="venture-logo">CarDekho</span>
+                            <span class="venture-logo">Rupyy</span>
+                            <span class="venture-logo">ZigWheels</span>
+                            <span class="venture-logo">InsuranceDekho</span>
+                            <span class="venture-logo">Revv</span>
+                            <span class="venture-logo">PowerDrift</span>
+                            <span class="venture-logo">College Dekho</span>
+                            <span class="venture-logo">TyresDekho</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2025 Girnar Software Pvt. Ltd. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <span class="connect-text">Connect:</span>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="emi-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>EMI Calculator</h3>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="emi-form">
+                    <div class="form-group">
+                        <label>Bike Price (₹)</label>
+                        <input type="number" id="bike-price" placeholder="150000" value="150000">
+                    </div>
+                    <div class="form-group">
+                        <label>Down Payment (₹)</label>
+                        <input type="number" id="down-payment" placeholder="30000" value="30000">
+                    </div>
+                    <div class="form-group">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="interest-rate" placeholder="12" value="12" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Loan Tenure (Years)</label>
+                        <input type="number" id="loan-tenure" placeholder="3" value="3">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateEMI()">Calculate EMI</button>
+                    <div class="emi-result" id="emi-result" style="display: none;">
+                        <h4>EMI Details</h4>
+                        <div class="result-item">
+                            <span>Monthly EMI:</span>
+                            <span class="emi-amount">₹0</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Total Interest:</span>
+                            <span class="total-interest">₹0</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Total Amount:</span>
+                            <span class="total-amount">₹0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-motorcycle fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Comparison Bar (Fixed at bottom when items are added) -->
+    <div id="comparison-bar" class="comparison-bar" style="display: none;">
+        <div class="comparison-content">
+            <div class="comparison-items">
+                <span class="comparison-count">0 bikes selected</span>
+                <div class="comparison-bikes"></div>
+            </div>
+            <div class="comparison-actions">
+                <button class="compare-now-btn" onclick="window.location.href='compare.html'">Compare Now</button>
+                <button class="clear-comparison-btn" onclick="clearComparison()">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

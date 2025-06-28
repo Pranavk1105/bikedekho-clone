@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Details - Price, Specifications & Reviews | BikeDekho</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                         <img src =  "bk.svg" alt="BikeDekho Logo" class="logo-image">
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search Bikes or Scooters" class="search-input">
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <span>English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="wishlist-icon">
+                        <i class="far fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </div>
+                    <div class="auth-section" onclick="window.location.href='login.html'">
+                        <i class="far fa-user"></i>
+                        <span>Login / Register</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="new-bikes.html" class="nav-link">NEW BIKES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bike-quiz.html" class="nav-link">BIKE QUIZ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cost-calculator.html" class="nav-link">COST CALCULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="compare.html" class="nav-link">COMPARE</a>
+                    </li>
+                </ul>
+                <div class="city-selector">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mumbai</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <a href="new-bikes.html">New Bikes</a>
+            <span class="separator">/</span>
+            <span class="current" id="bike-breadcrumb">Bike Details</span>
+        </div>
+    </div>
+
+    <!-- Bike Details Section -->
+    <section class="bike-details-section">
+        <div class="container">
+            <div class="bike-details-header">
+                <div class="bike-title-section">
+                    <h1 class="bike-title" id="bike-title">Loading...</h1>
+                    <div class="bike-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-text">4.2 (1,234 reviews)</span>
+                    </div>
+                </div>
+                <div class="bike-actions-header">
+                    <button class="wishlist-btn-header">
+                        <i class="far fa-heart"></i>
+                        Add to Wishlist
+                    </button>
+                    <button class="compare-btn-header">
+                        <i class="fas fa-plus"></i>
+                        Compare
+                    </button>
+                    <button class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                </div>
+            </div>
+
+            <div class="bike-details-content">
+                <div class="bike-gallery">
+                    <div class="main-image">
+                        <img id="main-bike-image" src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Bike Image">
+                        <div class="image-controls">
+                            <button class="image-control prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="image-control next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active">
+                            <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Thumbnail 3">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bike-info">
+                    <div class="price-section">
+                        <h2 class="bike-price" id="bike-price">₹1,50,000 - 1,80,000</h2>
+                        <p class="price-note">*Ex-showroom price in Mumbai</p>
+                        <div class="price-actions">
+                            <button class="get-quote-btn">Get Best Quote</button>
+                            <button class="emi-btn" onclick="openEMIModal()">
+                                <i class="fas fa-calculator"></i>
+                                Calculate EMI
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="key-specs">
+                        <h3>Key Specifications</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value" id="engine-spec">155 cc</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-gas-pump"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value" id="mileage-spec">45 kmpl</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <span class="spec-label">Power</span>
+                                    <span class="spec-value" id="power-spec">18.4 PS</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-weight-hanging"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <span class="spec-label">Weight</span>
+                                    <span class="spec-value" id="weight-spec">142 kg</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="variants-section">
+                        <h3>Available Variants</h3>
+                        <div class="variants-list">
+                            <div class="variant-item active">
+                                <span class="variant-name">Standard</span>
+                                <span class="variant-price">₹1,50,000</span>
+                            </div>
+                            <div class="variant-item">
+                                <span class="variant-name">Deluxe</span>
+                                <span class="variant-price">₹1,65,000</span>
+                            </div>
+                            <div class="variant-item">
+                                <span class="variant-name">Premium</span>
+                                <span class="variant-price">₹1,80,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Specifications -->
+    <section class="detailed-specs-section">
+        <div class="container">
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="specifications">Specifications</button>
+                    <button class="tab-btn" data-tab="features">Features</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    <button class="tab-btn" data-tab="colors">Colors</button>
+                    <button class="tab-btn" data-tab="dealers">Dealers</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="specifications">
+                        <div class="specs-table">
+                            <div class="specs-category">
+                                <h4>Engine & Transmission</h4>
+                                <div class="specs-row">
+                                    <span class="spec-name">Engine Type</span>
+                                    <span class="spec-detail">Single Cylinder, 4-Stroke, SOHC</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Displacement</span>
+                                    <span class="spec-detail">155 cc</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Max Power</span>
+                                    <span class="spec-detail">18.4 PS @ 10,000 rpm</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Max Torque</span>
+                                    <span class="spec-detail">14.2 Nm @ 7,500 rpm</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Transmission</span>
+                                    <span class="spec-detail">6-Speed Manual</span>
+                                </div>
+                            </div>
+
+                            <div class="specs-category">
+                                <h4>Fuel & Performance</h4>
+                                <div class="specs-row">
+                                    <span class="spec-name">Fuel Tank Capacity</span>
+                                    <span class="spec-detail">11 Litres</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Mileage (ARAI)</span>
+                                    <span class="spec-detail">45 kmpl</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Top Speed</span>
+                                    <span class="spec-detail">136 kmph</span>
+                                </div>
+                            </div>
+
+                            <div class="specs-category">
+                                <h4>Dimensions & Weight</h4>
+                                <div class="specs-row">
+                                    <span class="spec-name">Overall Length</span>
+                                    <span class="spec-detail">1,990 mm</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Overall Width</span>
+                                    <span class="spec-detail">725 mm</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Overall Height</span>
+                                    <span class="spec-detail">1,135 mm</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Wheelbase</span>
+                                    <span class="spec-detail">1,325 mm</span>
+                                </div>
+                                <div class="specs-row">
+                                    <span class="spec-name">Kerb Weight</span>
+                                    <span class="spec-detail">142 kg</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="features">
+                        <div class="features-grid">
+                            <div class="feature-category">
+                                <h4>Safety Features</h4>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> ABS (Anti-lock Braking System)</li>
+                                    <li><i class="fas fa-check"></i> LED Headlight</li>
+                                    <li><i class="fas fa-check"></i> LED Tail Light</li>
+                                    <li><i class="fas fa-check"></i> Side Stand Engine Cut-off</li>
+                                </ul>
+                            </div>
+                            <div class="feature-category">
+                                <h4>Comfort Features</h4>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Digital Instrument Cluster</li>
+                                    <li><i class="fas fa-check"></i> Electric Start</li>
+                                    <li><i class="fas fa-check"></i> Kick Start</li>
+                                    <li><i class="fas fa-check"></i> Mobile Charging Port</li>
+                                </ul>
+                            </div>
+                            <div class="feature-category">
+                                <h4>Technology Features</h4>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Bluetooth Connectivity</li>
+                                    <li><i class="fas fa-check"></i> Turn-by-turn Navigation</li>
+                                    <li><i class="fas fa-check"></i> Call & SMS Alerts</li>
+                                    <li><i class="fas fa-check"></i> Smartphone App</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="reviews">
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <div class="rating-score">4.2</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="rating-count">Based on 1,234 reviews</div>
+                            </div>
+                            <div class="rating-breakdown">
+                                <div class="rating-bar">
+                                    <span class="rating-label">5 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 60%"></div>
+                                    </div>
+                                    <span class="rating-percent">60%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">4 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 25%"></div>
+                                    </div>
+                                    <span class="rating-percent">25%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">3 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 10%"></div>
+                                    </div>
+                                    <span class="rating-percent">10%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">2 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 3%"></div>
+                                    </div>
+                                    <span class="rating-percent">3%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">1 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 2%"></div>
+                                    </div>
+                                    <span class="rating-percent">2%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Rajesh Kumar</span>
+                                        <span class="review-date">2 days ago</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Excellent bike with great mileage and smooth performance. The build quality is impressive and the features are worth the price.</p>
+                                </div>
+                                <div class="review-helpful">
+                                    <button class="helpful-btn">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        Helpful (23)
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-name">Priya Sharma</span>
+                                        <span class="review-date">1 week ago</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Good bike overall but the seat could be more comfortable for long rides. The engine performance is satisfactory.</p>
+                                </div>
+                                <div class="review-helpful">
+                                    <button class="helpful-btn">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        Helpful (15)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="load-more-reviews">Load More Reviews</button>
+                    </div>
+
+                    <div class="tab-pane" id="colors">
+                        <div class="colors-grid">
+                            <div class="color-option active">
+                                <div class="color-image">
+                                    <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=300&h=200" alt="Racing Red">
+                                </div>
+                                <div class="color-info">
+                                    <span class="color-name">Racing Red</span>
+                                    <div class="color-swatch" style="background-color: #dc2626;"></div>
+                                </div>
+                            </div>
+                            <div class="color-option">
+                                <div class="color-image">
+                                    <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=300&h=200" alt="Metallic Blue">
+                                </div>
+                                <div class="color-info">
+                                    <span class="color-name">Metallic Blue</span>
+                                    <div class="color-swatch" style="background-color: #2563eb;"></div>
+                                </div>
+                            </div>
+                            <div class="color-option">
+                                <div class="color-image">
+                                    <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=300&h=200" alt="Pearl White">
+                                </div>
+                                <div class="color-info">
+                                    <span class="color-name">Pearl White</span>
+                                    <div class="color-swatch" style="background-color: #f8fafc;"></div>
+                                </div>
+                            </div>
+                            <div class="color-option">
+                                <div class="color-image">
+                                    <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=300&h=200" alt="Matte Black">
+                                </div>
+                                <div class="color-info">
+                                    <span class="color-name">Matte Black</span>
+                                    <div class="color-swatch" style="background-color: #1f2937;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="dealers">
+                        <div class="dealers-search">
+                            <input type="text" placeholder="Enter your city or pincode" class="dealer-search-input">
+                            <button class="dealer-search-btn">Search Dealers</button>
+                        </div>
+                        <div class="dealers-list">
+                            <div class="dealer-item">
+                                <div class="dealer-info">
+                                    <h4 class="dealer-name">Mumbai Motors</h4>
+                                    <p class="dealer-address">123 Main Street, Andheri West, Mumbai - 400058</p>
+                                    <p class="dealer-contact">
+                                        <i class="fas fa-phone"></i> +91 98765 43210
+                                    </p>
+                                </div>
+                                <div class="dealer-actions">
+                                    <button class="contact-dealer-btn">Contact Dealer</button>
+                                    <button class="get-directions-btn">Get Directions</button>
+                                </div>
+                            </div>
+                            <div class="dealer-item">
+                                <div class="dealer-info">
+                                    <h4 class="dealer-name">Speed Auto</h4>
+                                    <p class="dealer-address">456 Park Road, Bandra East, Mumbai - 400051</p>
+                                    <p class="dealer-contact">
+                                        <i class="fas fa-phone"></i> +91 98765 43211
+                                    </p>
+                                </div>
+                                <div class="dealer-actions">
+                                    <button class="contact-dealer-btn">Contact Dealer</button>
+                                    <button class="get-directions-btn">Get Directions</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Bikes -->
+    <section class="similar-bikes-section">
+        <div class="container">
+            <h2 class="section-title">Similar Bikes</h2>
+            <div class="bikes-grid" id="similar-bikes">
+                <!-- Similar bikes will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 class="footer-title">ABOUT BIKEDEKHO</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers With Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">CONNECT WITH US</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advertise with Us</a></li>
+                        <li><a href="#">Become a Partner</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">OTHERS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">TrucksDekho</a></li>
+                        <li><a href="#">TractorsDekho</a></li>
+                        <li><a href="#">TyreDekho</a></li>
+                        <li><a href="#">BatteryDekho</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">EXPERIENCE BIKEDEKHO APP</h4>
+                    <div class="app-links">
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Download on App Store" loading="lazy">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Get it on Google Play" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2025 Girnar Software Pvt. Ltd. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <span class="connect-text">Connect:</span>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EMI Modal -->
+    <div id="emi-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>EMI Calculator</h3>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="emi-form">
+                    <div class="form-group">
+                        <label>Bike Price (₹)</label>
+                        <input type="number" id="bike-price-emi" placeholder="150000" value="150000">
+                    </div>
+                    <div class="form-group">
+                        <label>Down Payment (₹)</label>
+                        <input type="number" id="down-payment" placeholder="30000" value="30000">
+                    </div>
+                    <div class="form-group">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="interest-rate" placeholder="12" value="12" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Loan Tenure (Years)</label>
+                        <input type="number" id="loan-tenure" placeholder="3" value="3">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateEMI()">Calculate EMI</button>
+                    <div class="emi-result" id="emi-result" style="display: none;">
+                        <h4>EMI Details</h4>
+                        <div class="result-item">
+                            <span>Monthly EMI:</span>
+                            <span class="emi-amount">₹0</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Total Interest:</span>
+                            <span class="total-interest">₹0</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Total Amount:</span>
+                            <span class="total-amount">₹0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-motorcycle fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script src="bike-details.js"></script>
+</body>
+</html>

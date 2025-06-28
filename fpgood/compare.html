@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Bikes - Side by Side Comparison | BikeDekho</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                         <img src =  "bk.svg" alt="BikeDekho Logo" class="logo-image">
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search Bikes or Scooters" class="search-input">
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <span>English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="wishlist-icon">
+                        <i class="far fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </div>
+                    <div class="auth-section" onclick="window.location.href='login.html'">
+                        <i class="far fa-user"></i>
+                        <span>Login / Register</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="new-bikes.html" class="nav-link">NEW BIKES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bike-quiz.html" class="nav-link">BIKE QUIZ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cost-calculator.html" class="nav-link">COST CALCULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="compare.html" class="nav-link active">COMPARE BIKES</a>
+                    </li>
+                </ul>
+                <div class="city-selector">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mumbai</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <span class="current">Compare Bikes</span>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Compare Bikes</h1>
+            <p class="page-subtitle">Compare bikes side by side to make the right choice</p>
+        </div>
+    </section>
+
+    <!-- Bike Selector -->
+    <section class="bike-selector-section">
+        <div class="container">
+            <div class="selector-header">
+                <h3>Select Bikes to Compare</h3>
+                <p>Choose up to 3 bikes for detailed comparison</p>
+            </div>
+            
+            <div class="bike-selectors">
+                <div class="bike-selector-card">
+                    <div class="selector-placeholder" id="selector-1">
+                        <i class="fas fa-plus"></i>
+                        <span>Add Bike 1</span>
+                    </div>
+                    <div class="bike-search">
+                        <input type="text" placeholder="Search bike..." class="bike-search-input" data-selector="1">
+                        <div class="search-results" id="search-results-1"></div>
+                    </div>
+                </div>
+                
+                <div class="vs-divider">
+                    <span>VS</span>
+                </div>
+                
+                <div class="bike-selector-card">
+                    <div class="selector-placeholder" id="selector-2">
+                        <i class="fas fa-plus"></i>
+                        <span>Add Bike 2</span>
+                    </div>
+                    <div class="bike-search">
+                        <input type="text" placeholder="Search bike..." class="bike-search-input" data-selector="2">
+                        <div class="search-results" id="search-results-2"></div>
+                    </div>
+                </div>
+                
+                <div class="vs-divider">
+                    <span>VS</span>
+                </div>
+                
+                <div class="bike-selector-card">
+                    <div class="selector-placeholder" id="selector-3">
+                        <i class="fas fa-plus"></i>
+                        <span>Add Bike 3</span>
+                    </div>
+                    <div class="bike-search">
+                        <input type="text" placeholder="Search bike..." class="bike-search-input" data-selector="3">
+                        <div class="search-results" id="search-results-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section" id="comparison-section" style="display: none;">
+        <div class="container">
+            <div class="comparison-header">
+                <h3>Detailed Comparison</h3>
+                <div class="comparison-actions">
+                    <button class="export-btn">
+                        <i class="fas fa-download"></i>
+                        Export PDF
+                    </button>
+                    <button class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                </div>
+            </div>
+            
+            <div class="comparison-table-container">
+                <table class="comparison-table" id="comparison-table">
+                    <!-- Comparison table will be populated by JavaScript -->
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Comparisons -->
+    <section class="popular-comparisons">
+        <div class="container">
+            <h2 class="section-title">Popular Comparisons</h2>
+            <div class="comparisons-grid">
+                <div class="comparison-card">
+                    <div class="comparison-bikes">
+                        <div class="bike-thumb">
+                            <img src="https://cdn.bikedekho.com/processedimages/honda/sp125/source/sp1256789ead2971d1.jpg?tr=w-150" alt="Honda SP 125">
+                            <span>Honda SP 125</span>
+                        </div>
+                        <div class="vs-text">VS</div>
+                        <div class="bike-thumb">
+                            <img src="https://cdn.bikedekho.com/processedimages/hero-motocorp/hero-motocorp-splendor/source/hero-motocorp-splendor6594efca3fa93.jpg?tr=w-150" alt="Hero Splendor Plus">
+                            <span>Hero Splendor Plus</span>
+                        </div>
+                    </div>
+                    <button class="compare-btn" onclick="loadComparison('honda-sp125', 'hero-splendor-plus')">
+                        Compare Now
+                    </button>
+                </div>
+                
+                <div class="comparison-card">
+                    <div class="comparison-bikes">
+                        <div class="bike-thumb">
+                            <img src="https://cdn.bikedekho.com/processedimages/tvs/raider/source/raider681da83932141.jpg?tr=w-150" alt="TVS Raider">
+                            <span>TVS Raider</span>
+                        </div>
+                        <div class="vs-text">VS</div>
+                        <div class="bike-thumb">
+                            <img src="https://cdn.bikedekho.com/processedimages/bajaj/bajaj-pulsar-150/source/bajaj-pulsar-150683044ac179cc.jpg?tr=w-150" alt="Bajaj Pulsar 150">
+                            <span>Bajaj Pulsar 150</span>
+                        </div>
+                    </div>
+                    <button class="compare-btn" onclick="loadComparison('tvs-raider', 'bajaj-pulsar-150')">
+                        Compare Now
+                    </button>
+                </div>
+                
+                <div class="comparison-card">
+                    <div class="comparison-bikes">
+                        <div class="bike-thumb">
+                            <img src="https://cdn.bikedekho.com/processedimages/honda/activa-6g/source/activa-6g65e80a97062a4.jpg?tr=w-150" alt="Honda Activa 6G">
+                            <span>Honda Activa 6G</span>
+                        </div>
+                        <div class="vs-text">VS</div>
+                        <div class="bike-thumb">
+                            <img src="https://cdn.bikedekho.com/processedimages/suzuki/2025-access-125/source/2025-access-125681da5489661f.jpg?tr=w-150" alt="Suzuki Access 125">
+                            <span>Suzuki Access 125</span>
+                        </div>
+                    </div>
+                    <button class="compare-btn" onclick="loadComparison('honda-activa-6g', 'suzuki-access-125')">
+                        Compare Now
+                    </button>
+                </div>
+                
+                <div class="comparison-card">
+                    <div class="comparison-bikes">
+                        <div class="bike-thumb">
+                            <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Yamaha R15 V4">
+                            <span>Yamaha R15 V4</span>
+                        </div>
+                        <div class="vs-text">VS</div>
+                        <div class="bike-thumb">
+                            <img src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="KTM RC 200">
+                            <span>KTM RC 200</span>
+                        </div>
+                    </div>
+                    <button class="compare-btn" onclick="loadComparison('yamaha-r15-v4', 'ktm-rc-200')">
+                        Compare Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 class="footer-title">ABOUT BIKEDEKHO</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers With Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">CONNECT WITH US</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advertise with Us</a></li>
+                        <li><a href="#">Become a Partner</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">OTHERS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">TrucksDekho</a></li>
+                        <li><a href="#">TractorsDekho</a></li>
+                        <li><a href="#">TyreDekho</a></li>
+                        <li><a href="#">BatteryDekho</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">EXPERIENCE BIKEDEKHO APP</h4>
+                    <div class="app-links">
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Download on App Store" loading="lazy">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Get it on Google Play" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2025 Girnar Software Pvt. Ltd. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <span class="connect-text">Connect:</span>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-motorcycle fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script src="compare.js"></script>
+</body>
+</html>

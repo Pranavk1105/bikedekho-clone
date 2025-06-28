@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Finder Quiz - Find Your Perfect Bike | BikeDekho</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                         <img src =  "bk.svg" alt="BikeDekho Logo" class="logo-image">
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search Bikes or Scooters" class="search-input">
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <span>English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="wishlist-icon">
+                        <i class="far fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </div>
+                    <div class="auth-section" onclick="window.location.href='login.html'">
+                        <i class="far fa-user"></i>
+                        <span>Login / Register</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="new-bikes.html" class="nav-link">NEW BIKES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bike-quiz.html" class="nav-link active">BIKE QUIZ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cost-calculator.html" class="nav-link">COST CALCULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="compare.html" class="nav-link">COMPARE</a>
+                    </li>
+                </ul>
+                <div class="city-selector">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mumbai</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <span class="current">Bike Finder Quiz</span>
+        </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <div class="quiz-header">
+                <h1 class="quiz-title">Find Your Perfect Bike</h1>
+                <p class="quiz-subtitle">Answer a few questions and get personalized bike recommendations</p>
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text">Question <span id="current-question">1</span> of <span id="total-questions">8</span></span>
+                </div>
+            </div>
+
+            <div class="quiz-container">
+                <div class="quiz-card" id="quiz-card">
+                    <!-- Questions will be populated by JavaScript -->
+                </div>
+
+                <div class="quiz-navigation">
+                    <button class="quiz-btn secondary" id="prev-btn" onclick="previousQuestion()" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button class="quiz-btn primary" id="next-btn" onclick="nextQuestion()" disabled>
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="quiz-results" id="quiz-results" style="display: none;">
+                <div class="results-header">
+                    <h2>Your Recommended Bikes</h2>
+                    <p>Based on your preferences, here are the best bikes for you:</p>
+                </div>
+                
+                <div class="recommended-bikes" id="recommended-bikes">
+                    <!-- Recommended bikes will be populated by JavaScript -->
+                </div>
+
+                <div class="quiz-actions">
+                    <button class="quiz-btn secondary" onclick="restartQuiz()">
+                        <i class="fas fa-redo"></i>
+                        Retake Quiz
+                    </button>
+                    <button class="quiz-btn primary" onclick="window.location.href='new-bikes.html'">
+                        View All Bikes
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Answer Questions</h3>
+                    <p>Tell us about your riding needs, budget, and preferences</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>AI Analysis</h3>
+                    <p>Our smart algorithm analyzes your answers and matches bikes</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Get Recommendations</h3>
+                    <p>Receive personalized bike recommendations tailored for you</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Make Decision</h3>
+                    <p>Compare options and choose the perfect bike for your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 class="footer-title">ABOUT BIKEDEKHO</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers With Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">CONNECT WITH US</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advertise with Us</a></li>
+                        <li><a href="#">Become a Partner</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">OTHERS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">TrucksDekho</a></li>
+                        <li><a href="#">TractorsDekho</a></li>
+                        <li><a href="#">TyreDekho</a></li>
+                        <li><a href="#">BatteryDekho</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">EXPERIENCE BIKEDEKHO APP</h4>
+                    <div class="app-links">
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Download on App Store" loading="lazy">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="https://images.pexels.com/photos/163407/bike-wheel-tire-bike-wheel-163407.jpeg?auto=compress&cs=tinysrgb&w=150&h=50" alt="Get it on Google Play" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2025 Girnar Software Pvt. Ltd. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <span class="connect-text">Connect:</span>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-motorcycle fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script src="bike-quiz.js"></script>
+</body>
+</html>
